@@ -1,0 +1,50 @@
+Git Basic Commands:
+
+1. git help <verb>, git <verb> --help   : Views manual page
+
+
+scenario-1: Initialize a repository from existing code
+
+2. git init  :	initialize a repo from existing code
+3. rm -rf .git : to stop tracking project with git
+4. touch .gitignore :ignores the files in gitignore like dot files
+
+
+Working directory   ----> Staging area   ----> git repository
+->untracked and modified files will be in working directory
+->From staging area, we can pick or chose what to be commited
+->Push the changes to remote repository
+
+5. git add -A	: adds all files in the work directory to staging area
+6. git reset	: removes files from staging area
+7. git log	: shows waht we have commited
+
+scenario-2: Cloning a remote repo
+8. git clone <url> <where to clone>
+ 
+viewing information about the remote repository
+9. git remote -v 	:provides available remote connections
+10. git branch -a
+11. git pull origin master	:pulls any changes made since last time
+    
+Creating branch for desired future
+12. git branch branch-name
+13. git checkout branch-name
+	Then commit
+	After commit push branch to remote
+14. git push -u origin branch-name
+15. git branch -a
+   Next Pull the changes and push
+    
+Merging a branch
+16. git checkout master
+17. git pull origin master
+18. git branch --merged     :to see which branches are already merged into the branch we are on
+19. git merge branch-name
+20. git push origin master
+
+Deleting a branch
+21. git branch --merged
+22. git branch -d branch-name
+23. git branch -a
+24. git push origin --delete branch-name
